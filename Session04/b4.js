@@ -8,6 +8,6 @@ function checkEmail(){
         result.textContent = "email hợp lệ";
     } else {
         result.style.color= "red";
-        result.style.color = "email ko hợp lệ";
+        result.textContent = "email ko hợp lệ";
     }
 }

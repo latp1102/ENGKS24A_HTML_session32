@@ -1,14 +1,16 @@
-const contentImages = document.querySelectorAll(".content img");
-const overlay = document.getElementById("overlay");
-const overlayImg = document.getElementById("overlay-img");
+const images = document.querySelectorAll('.image');
+const overlay = document.getElementById('imageOverlay');
+const bigImage = document.getElementById('BigImage');
 
-contentImages.forEach((img) => {
-  img.addEventListener("click", () => {
-    overlayImg.src = img.src;
-    overlay.style.display = "flex";
+images.forEach(image => {
+  image.addEventListener('click', function () {
+    bigImage.src = this.src;
+    overlay.style.display = 'flex';
   });
 });
 
-overlay.addEventListener("click", () => {
-  overlay.style.display = "none";
+overlay.addEventListener('click', function () {
+  if (event.target === overlay) {
+    overlay.style.display = 'none';
+  }
 });
